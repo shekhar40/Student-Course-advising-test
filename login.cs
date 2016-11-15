@@ -41,35 +41,17 @@ namespace WindowsFormsApplication1
                 dataConnection.Open();
                 id = Convert.ToString(dataCommand.ExecuteScalar());
             }
-            if (id == textBox1.Text && t1.Text == "Teacher" && textBox2.Text == "123")
+            if (id == textBox1.Text)
             {
-                Teacher h = new Teacher();
-                h.Show();
-                this.Hide();
+                MessageBox.Show("login Sucsess");
             }
-            else if (t1.Text == "Student" && id ==textBox1.Text)
-            {
-                Student s = new Student();
-                this.Hide();
-                s.Show();
-                }
             else
             {
                 MessageBox.Show("failed !!! try Again");
             }
         }
 
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            t1.Text = "Student";
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            t1.Text = "Teacher";
-        }
-
-        private void login_Load(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
